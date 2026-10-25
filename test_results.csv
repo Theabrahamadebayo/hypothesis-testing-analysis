@@ -1,0 +1,27 @@
+test,comparison,statistic,p_value,note
+Shapiro-Wilk,Extract A,0.931,0.393,p < 0.05 suggests the data are not normal
+Shapiro-Wilk,Extract B,0.933,0.412,p < 0.05 suggests the data are not normal
+Shapiro-Wilk,Extract C,0.739,0.002,p < 0.05 suggests the data are not normal
+Shapiro-Wilk,Reference antibiotic,0.934,0.4259,p < 0.05 suggests the data are not normal
+Levene,all groups,1.02,0.3929,p < 0.05 suggests unequal variances
+One-way ANOVA,all groups,27.586,0.0,eta squared = 0.65
+Kruskal-Wallis,all groups,27.54,0.0,non-parametric alternative to ANOVA
+Tukey HSD,Extract A vs Extract B,-0.992,0.519,mean difference = -1.0 mm
+Mann-Whitney (Holm),Extract A vs Extract B,,0.6803,adjusted p-value
+Tukey HSD,Extract A vs Extract C,0.35,0.9617,mean difference = 0.3 mm
+Mann-Whitney (Holm),Extract A vs Extract C,,0.6803,adjusted p-value
+Tukey HSD,Extract A vs Reference antibiotic,-5.433,0.0,mean difference = -5.4 mm
+Mann-Whitney (Holm),Extract A vs Reference antibiotic,,0.0002,adjusted p-value
+Tukey HSD,Extract B vs Extract C,1.342,0.2575,mean difference = 1.3 mm
+Mann-Whitney (Holm),Extract B vs Extract C,,0.2186,adjusted p-value
+Tukey HSD,Extract B vs Reference antibiotic,-4.442,0.0,mean difference = -4.4 mm
+Mann-Whitney (Holm),Extract B vs Reference antibiotic,,0.0004,adjusted p-value
+Tukey HSD,Extract C vs Reference antibiotic,-5.783,0.0,mean difference = -5.8 mm
+Mann-Whitney (Holm),Extract C vs Reference antibiotic,,0.0002,adjusted p-value
+Welch t-test,Extract B vs Reference antibiotic,-6.176,0.0,"difference -4.4 mm, 95% CI -5.9 to -2.9, Cohen d = -2.52"
+Mann-Whitney U,Extract B vs Reference antibiotic,4.0,0.0001,non-parametric check
+Simulation,"Type I error, single t-test",,0.049,should be close to 0.05
+Simulation,"Family-wise error, 6 uncorrected tests",,0.1986,inflated
+Simulation,"Family-wise error, 6 tests with Holm",,0.0404,controlled near 0.05
+Simulation,Power at n = 12 per group,,0.6502,"true difference 2 mm, sd 2 mm"
+Simulation,Sample size for 80% power,,0.17,value shown is n divided by 100
